@@ -1,22 +1,28 @@
 {
-    "name"       : "millken/ypf",
-    "description": "PHP framework & Application Server.",
-    "type"       : "library",
-    "keywords"   : ["library", "webserver", "framework"],
-    "homepage"   : "https://github.com/millken/ypf/",
-    "license"    : "LGPL",
-    "autoload": {
-        "psr-0": {"Ypf": "src/"}
-    },
-	"require": {
-		 "php" : ">=7.0.0",
-        "mtdowling/cron-expression": "^1.1"
-    },
-    "authors"    : [
-        {
-            "name" : "millken",
-            "email": "millken@gmail.com"
-        }
-    ],
-    "minimum-stability": "dev"
+  "name": "jason-gao/ypf",
+  "description": "PHP framework & Application Server.",
+  "type": "library",
+  "keywords": [
+    "library",
+    "webserver",
+    "framework"
+  ],
+  "homepage": "https://github.com/jason-gao/ypf",
+  "license": "LGPL",
+  "autoload": {
+    "psr-0": {
+      "Ypf": "src/"
+    }
+  },
+  "require": {
+    "php": ">=7.0.0",
+    "mtdowling/cron-expression": "^1.1"
+  },
+  "authors": [
+    {
+      "name": "jasong",
+      "email": "3048789891@qq.com"
+    }
+  ],
+  "minimum-stability": "dev"
 }
