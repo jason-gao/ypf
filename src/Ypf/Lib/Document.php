@@ -6,15 +6,9 @@ class Document {
 	private $title;
 	private $description;
 	private $keywords;
-	private $globals = array();
 	private $links = array();
 	private $styles = array();
 	private $scripts = array();
-
-	public function reset() {
-		$this->title = $this->description = $this->keywords = null;
-		$this->globals = $this->links = $this->styles = $this->scripts = array();
-	}
 
 	public function setTitle($title) {
 		$this->title = $title;
@@ -24,14 +18,6 @@ class Document {
 		return $this->title;
 	}
 
-	public function setGlobal($key, $value) {
-		$this->globals[$key] = $value;
-	}
-
-	public function getGlobal($key) {
-		return isset($this->globals[$key]) ? $this->globals[$key] : NULL;
-	}
-	
 	public function setDescription($description) {
 		$this->description = $description;
 	}

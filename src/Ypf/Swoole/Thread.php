@@ -5,7 +5,7 @@ class Thread {
 	private $shm;
 
 	public function __construct() {
-		$this->shm = new \Ypf\Cache\Stores\Shm;
+		$this->shm = new \Ypf\Cache\Shm;
 	}
 
 	public function add($func, $args = [], $callback = null, $thread = []) {

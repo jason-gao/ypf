@@ -33,8 +33,6 @@ class Config {
 	public function load($path) {
 		if (is_file($path)) {
 			return self::parseFile($path);
-		}elseif(!is_dir($path)){
-			throw new \Exception(" config path '{$path}' not exist");
 		}
 
 		foreach (glob($path . '/*.conf') as $config_file) {
