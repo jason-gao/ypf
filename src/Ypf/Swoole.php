@@ -55,6 +55,10 @@ class Swoole extends Ypf {
 		$this->serverConfig["server"]["listen"] : self::LISTEN;
 		list($addr, $port) = explode(":", $listen, 2);
 		$this->server = new \swoole_http_server($addr, $port, SWOOLE_BASE, SWOOLE_TCP);
+		$swoole_version = phpversion('swoole');
+		if(intval(substr($swoole_version, 0,strpos($swoole_version, '.'))) > 1){
+			$this->server->set(['enable_coroutine' => false]);
+		}
 		if(isset($this->serverConfig["server"]["ssl_listen"])) {
 			list($ssl_addr, $ssl_port) = explode(":", $this->serverConfig["server"]["ssl_listen"], 2);
 			$this->server->addlistener($ssl_addr, $ssl_port, SWOOLE_TCP | SWOOLE_SSL);
